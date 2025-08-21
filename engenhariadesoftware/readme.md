@@ -10,11 +10,33 @@
 <h2>🖥Comentário - Segundo trecho do livro </h2>
 <p> O trecho dois apresenta algumas perguntas comuns na área de engenharia de software, as quais não possuem respostas fundamentais.
 Mas que podem ser estipulados possíveis caminhos para encontrar essas respostas. Além disso, o livro considera a engenharia de software uma 
-programação integrada ao longo do tempo e questiona como um código pode se tornar sustentável ao longo do tempo.Ele conclui apresentando três principais fundamentos para projetar,arquitetar e escrever o seu código, os quais são: 
+programação integrada ao longo do tempo e questiona como um código pode se tornar sustentável ao longo do tempo.Ele conclui apresentando três principais fundamentos para projetar, arquitetar e escrever o seu código, os quais são: 
   <ul>
   <li>Tempo e mudança
+     <p>Esse princípio reconhece que todo software está sujeito a mudanças com o passar do tempo. Isso pode acontecer por diversos motivos: mudanças nos requisitos do cliente, novas tecnologias, correções de erros, ou 
+  evolução do mercado. Por isso, o código precisa ser projetado com flexibilidade e manutenibilidade em mente.</p>
+    
   <li>Escala e crescimento 
+      <p>Este fundamento trata da capacidade do software de crescer, tanto em termos de quantidade de usuários, quanto em funcionalidades e complexidade técnica.</p>
+
   <li>Compensações e custos  
+      <p>Na engenharia de software, não existem soluções perfeitas — tudo envolve compromissos (trade-offs).Ou seja, o engenheiro de software precisa avaliar custos de curto e longo prazo ao tomar decisões técnicas.</p>
+
+  </ul>
+  </p>
+ 
+<h2>📌Trade offs </h2>
+<p> Trade-off é termo muito utilizado na economia e que exige a escolha entre duas ou mais opções, sabendo que
+ao escolher uma, abrimos mão das outras.</p>
+<p><b>3 exemplos</b> de Trade offs:
+  <ul>
+  <li>Tempo vs dinheiro
+    <p>Escolher entre tempo e dinheiro depende das prioridades — se o prazo é apertado, o dinheiro pode ser o recurso a ser sacrificado; se há mais tempo disponível, pode-se reduzir os custos.</p>
+    
+  <li>Qualidade vs preço
+    <p>Nem sempre o mais caro é o melhor, mas buscar sempre o "mais barato" pode sair caro no longo prazo. O ideal é encontrar o equilíbrio entre o custo e o valor entregue.</p>
+  <li>Consumo Presente vs poupança futura
+    <p>Viver o presente é importante, mas um planejamento financeiro saudável envolve equilíbrio — poupar hoje pode garantir tranquilidade amanhã, enquanto o consumo excessivo pode levar a problemas futuros.</p>
   </ul>
   </p>
  
