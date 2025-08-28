@@ -40,3 +40,6 @@ ao escolher uma, abrimos mão das outras.</p>
   </ul>
   </p>
  
+<h2>📝Diagrama de Classes UML</h2>
+
+<img align="right" src="../engenhariadesoftware/Diagrama de Classes UML.drawio.png" alt="Diagrama" width="1000" height="600" />
