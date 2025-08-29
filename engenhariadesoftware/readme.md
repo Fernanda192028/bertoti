@@ -43,3 +43,66 @@ ao escolher uma, abrimos mão das outras.</p>
 <h2>📝Diagrama de Classes UML</h2>
 
 <img align="right" src="../engenhariadesoftware/Diagrama de Classes UML.drawio.png" alt="Diagrama" width="1000" height="600" />
+
+
+<h2>Código em Java</h2>
+<pre><code> 
+import java.util.List;
+import java.util.ArrayList;
+
+class Aeroporto {
+
+    private List<Passageiro> passageiros;
+
+    public Aeroporto() {
+        passageiros = new ArrayList<>();
+    }
+
+   
+    public void addPassageiro(Passageiro passageiro) {
+        passageiros.add(passageiro);
+    }
+
+    
+    public List<Passageiro> buscarPassageiroNome(String nome) {
+        List<Passageiro> resultado = new ArrayList<>();
+        for (Passageiro p : passageiros) {
+            if (p.getNome().equals(nome)) {
+                resultado.add(p);
+            }
+        }
+        return resultado;
+    }
+
+   
+    public List<Passageiro> buscarPassageiroIdade(int idade) {
+        List<Passageiro> resultado = new ArrayList<>();
+        for (Passageiro p : passageiros) {
+            if (p.getIdade() == idade) {
+                resultado.add(p);
+            }
+        }
+        return resultado;
+    }
+}
+
+class Passageiro {
+
+    private String nome;
+    private int idade;
+
+    
+    public Passageiro(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+   
+    public String getNome() {
+        return nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+}</code></pre>
