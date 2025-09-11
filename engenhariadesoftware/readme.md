@@ -41,11 +41,16 @@ ao escolher uma, abrimos mão das outras.</p>
   </p>
  
 <h2>📝Diagrama de Classes UML</h2>
+<h3>📌Primeiro</h3>
+<img align="right" src="../engenhariadesoftware/Aeroporto.drawio.png" alt="Diagrama" width="1000" height="600" />
 
-<img align="right" src="../engenhariadesoftware/Diagrama de Classes UML.drawio.png" alt="Diagrama" width="1000" height="600" />
+<h3>📌Segundo</h3>
+<img align="right" src="../engenhariadesoftware/Diagrama 2.png" alt="Diagrama" width="1000" height="600" />
+
 
 
 <h2>Código em Java</h2>
+<h3>Classe Aeroporto</h3>
 <pre><code> 
 import java.util.List;
 import java.util.ArrayList;
@@ -85,7 +90,11 @@ class Aeroporto {
         return resultado;
     }
 }
+</code></pre>
 
+
+<h3>Classe Passageiro</h3>
+<pre><code> 
 class Passageiro {
 
     private String nome;
@@ -102,7 +111,10 @@ class Passageiro {
         return nome;
     }
 
+  
+
     public int getIdade() {
         return idade;
     }
-}</code></pre>
+}
+</code></pre>
