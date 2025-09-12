@@ -48,8 +48,10 @@ ao escolher uma, abrimos mão das outras.</p>
 <img align="right" src="../engenhariadesoftware/Diagrama 2.png" alt="Diagrama" width="1000" height="600" />
 
 
+<h2>Códigos em Java</h2>
 
-<h2>Código em Java</h2>
+<h2>✈️Aeroporto</h2>
+
 <h3>Classe Aeroporto</h3>
 <pre><code> 
 import java.util.List;
@@ -115,6 +117,230 @@ class Passageiro {
 
     public int getIdade() {
         return idade;
+    }
+}
+</code></pre>
+
+<h2>🖥️Loja de eletrônicos</h2>
+
+<h3>Classe Computadores</h3>
+<pre><code> 
+import java.util.ArrayList;
+import java.util.List;
+
+class Computadores {
+    private String marca;
+    private String CPU;
+    private String memoria;
+
+    public Computadores(String marca, String CPU, String memoria) {
+        this.marca = marca;
+        this.CPU = CPU;
+        this.memoria = memoria;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getCPU() {
+        return CPU;
+    }
+
+    public String getMemoria() {
+        return memoria;
+    }
+
+    @Override
+    public String toString() {
+        return "Computador [Marca=" + marca + ", CPU=" + CPU + ", Memória=" + memoria + "]";
+    }
+}
+
+</code></pre>
+
+<h3>Classe Celulares</h3>
+<code><pre>
+class Celulares {
+    private String marca;
+    private float tamanho;
+    private String cor;
+
+    public Celulares(String marca, float tamanho, String cor) {
+        this.marca = marca;
+        this.tamanho = tamanho;
+        this.cor = cor;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public float getTamanho() {
+        return tamanho;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    @Override
+    public String toString() {
+        return "Celular [Marca=" + marca + ", Tamanho=" + tamanho + "\", Cor=" + cor + "]";
+    }
+}
+</code></pre>
+
+
+<h3>Classe Loja de Eletrônicos</h3>
+<code><pre>
+class LojaDeEletronicos {
+    private List<Computadores> computadores;
+    private List<Celulares> celulares;
+
+    public LojaDeEletronicos() {
+        computadores = new ArrayList<>();
+        celulares = new ArrayList<>();
+    }
+
+    // Métodos de adicionar
+    public void addComputadores(Computadores c) {
+        computadores.add(c);
+    }
+
+    public void addCelulares(Celulares c) {
+        celulares.add(c);
+    }
+</code></pre>
+
+
+<h3>Métodos de busca - Computadores</h3>
+<code><pre>
+    public List<Computadores> buscarComputadoresMarca(String marca) {
+        List<Computadores> resultado = new ArrayList<>();
+        for (Computadores c : computadores) {
+            if (c.getMarca().equalsIgnoreCase(marca)) {
+                resultado.add(c);
+            }
+        }
+        return resultado;
+    }
+
+    public List<Computadores> buscarComputadoresCPU(String CPU) {
+        List<Computadores> resultado = new ArrayList<>();
+        for (Computadores c : computadores) {
+            if (c.getCPU().equalsIgnoreCase(CPU)) {
+                resultado.add(c);
+            }
+        }
+        return resultado;
+    }
+
+    public List<Computadores> buscarComputadoresMemoria(String memoria) {
+        List<Computadores> resultado = new ArrayList<>();
+        for (Computadores c : computadores) {
+            if (c.getMemoria().equalsIgnoreCase(memoria)) {
+                resultado.add(c);
+            }
+        }
+        return resultado;
+    }
+</code></pre>
+
+<h3> Métodos de busca - Celulares</h3>
+<code><pre>
+    public List<Celulares> buscarCelularesMarca(String marca) {
+        List<Celulares> resultado = new ArrayList<>();
+        for (Celulares c : celulares) {
+            if (c.getMarca().equalsIgnoreCase(marca)) {
+                resultado.add(c);
+            }
+        }
+        return resultado;
+    }
+
+    public List<Celulares> buscarCelularesTamanho(float tamanho) {
+        List<Celulares> resultado = new ArrayList<>();
+        for (Celulares c : celulares) {
+            if (c.getTamanho() == tamanho) {
+                resultado.add(c);
+            }
+        }
+        return resultado;
+    }
+
+    public List<Celulares> buscarCelularesCor(String cor) {
+        List<Celulares> resultado = new ArrayList<>();
+        for (Celulares c : celulares) {
+            if (c.getCor().equalsIgnoreCase(cor)) {
+                resultado.add(c);
+            }
+        }
+        return resultado;
+    }
+}
+</code></pre>
+
+<h2>🛠️Testes dos códigos em Java</h2>
+
+<h3>✈️Aeroporto - teste</h3>
+<code><pre>
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Aeroporto aeroporto = new Aeroporto();
+
+        
+        aeroporto.addPassageiro(new Passageiro("Fernanda", 25));
+        aeroporto.addPassageiro(new Passageiro("Carlos", 30));
+        aeroporto.addPassageiro(new Passageiro("Ana", 25));
+        aeroporto.addPassageiro(new Passageiro("Fernanda", 40));
+
+      
+        System.out.println("=== Passageiros com nome Fernanda ===");
+        List<Passageiro> listaNome = aeroporto.buscarPassageiroNome("Fernanda");
+        for (Passageiro p : listaNome) {
+            System.out.println("Nome: " + p.getNome() + ", Idade: " + p.getIdade());
+        }
+
+        System.out.println("\n=== Passageiros com idade 25 ===");
+        List<Passageiro> listaIdade = aeroporto.buscarPassageiroIdade(25);
+        for (Passageiro p : listaIdade) {
+            System.out.println("Nome: " + p.getNome() + ", Idade: " + p.getIdade());
+        }
+    }
+}
+</code></pre>
+
+<h3>🖥️Loja de eletrônicos - teste</h3>
+<code><pre>
+  public class Main {
+    public static void main(String[] args) {
+        LojaDeEletronicos loja = new LojaDeEletronicos();
+
+        loja.addComputadores(new Computadores("Dell", "i7", "16GB"));
+        loja.addComputadores(new Computadores("HP", "i5", "8GB"));
+        loja.addComputadores(new Computadores("Apple", "M1", "16GB"));
+
+     
+        loja.addCelulares(new Celulares("Samsung", 6.5f, "Preto"));
+        loja.addCelulares(new Celulares("Apple", 6.1f, "Branco"));
+        loja.addCelulares(new Celulares("Xiaomi", 6.7f, "Azul"));
+
+
+        System.out.println("=== Computadores Dell ===");
+        System.out.println(loja.buscarComputadoresMarca("Dell"));
+
+        System.out.println("\n=== Computadores com 16GB de memória ===");
+        System.out.println(loja.buscarComputadoresMemoria("16GB"));
+
+        System.out.println("\n=== Celulares cor Azul ===");
+        System.out.println(loja.buscarCelularesCor("Azul"));
+
+        System.out.println("\n=== Celulares com tamanho 6.1 ===");
+        System.out.println(loja.buscarCelularesTamanho(6.1f));
     }
 }
 </code></pre>
