@@ -42,10 +42,10 @@ ao escolher uma, abrimos mão das outras.</p>
  
 <h2>📝Diagrama de Classes UML</h2>
 <h3>📌Primeiro</h3>
-<img align="right" src="../engenhariadesoftware/Aeroporto.drawio.png" alt="Diagrama" width="1000" height="600" />
+<img align="right" src="../engenhariadesoftware1/Aeroporto.drawio.png" alt="Diagrama" width="1000" height="600" />
 
 <h3>📌Segundo</h3>
-<img align="right" src="../engenhariadesoftware/Diagrama 2.png" alt="Diagrama" width="1000" height="600" />
+<img align="right" src="../engenhariadesoftware1/Diagrama 2.png" alt="Diagrama" width="1000" height="600" />
 
 
 <h2>Códigos em Java</h2>
